@@ -1,0 +1,284 @@
+Auteur: pf68pov
+Date: 28.10.2024
+Entreprise: DGEP
+Description: Calculatirce
+
+Voici les ordres du programme Calculatirce  :
+
+
+	//Gestion des textes
+	Créer une zone mémoire #TexteA avec le texte "\nQuel type de calcul voulez-vous faire Monsieur Renato Alves ? Addition, Soustraction, Multiplication, Division, Inversion, Racine, Puissance, Pourcentage ? ".
+	Créer une zone mémoire #TexteB avec le texte "\nVeuillez entrer un nombre ; ".
+	Créer une zone mémoire #TexteC avec le texte "\nVeuillez entrer un deuxième nombre ; ".
+	Créer une zone mémoire #TexteD avec le texte "\nVoulez-vous sauvegarder votre dernière réponse ? (Y/N) ".
+
+	//Gestion des Réponses
+	Créer une zone mémoire #Reponse avec le texte " ".
+	Créer une zone mémoire #chiffre1 avec le texte " ".
+	Créer une zone mémoire #chiffre2 avec le texte " ".
+	Créer une zone mémoire #resultat avec le texte " ".
+	Créer une zone mémoire #reponseF.
+	Créer une zone mémoire #mem2.
+
+	//Gestion de la calculette
+	Créer une zone mémoire #Conti avec la valeur 1.
+	Créer une zone mémoire #mem.
+
+	//Calculatrice
+	Répéter tant que #Conti est égal à 1
+		Effacer l'écran.
+		Masquer le curseur.
+	
+		Afficher "+--------------+\n".
+		Afficher "| Calculatrice |\n".
+		Afficher "+--------------+".
+
+		Afficher "#TexteA".	
+		Récupérer la saisie et la stocker dans la zone mémoire nommée #Reponse.
+	
+
+		//Addition
+		Si #Reponse est égale à "Addition" alors
+			Afficher "#TexteB".	
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre1.
+			Afficher "#TexteC".	
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre2.
+			Si #chiffre1 est égal à "mem" alors
+				Copier la valeur de #mem dans #chiffre1.
+			?
+			Si #chiffre2 est égal à "mem" alors 
+				Copier la valeur de #mem dans #chiffre2.
+			?
+			#resultat =  #chiffre1 plus #chiffre2.	
+			Afficher "Votre calcul est égal à #resultat".
+			Attendre 200ms.
+			Afficher "#TexteD".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #mem2.
+			Si #mem2 est égal à "Y" alors
+				#mem = #resultat.
+				Afficher "Vous avez sauvegardé votre réponse".
+			?
+		
+			Attendre 200ms.
+			Afficher "\n\nVoulez vous rejouer ? (Y/N): ".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #reponseF.
+			Si #reponseF est égal à "Y" alors	
+				Copier le résultat de (#Conti) dans #Conti.
+			sinon
+				Copier le résultat de (#Conti + 1) dans #Conti.
+			?
+		?
+
+		//Soustraction
+		Si #Reponse est égale à "Soustraction" alors
+			Afficher "#TexteB".	
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre1.
+			Afficher "#TexteC".	
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre2.
+			Si #chiffre1 est égal à "mem" alors
+				Copier la valeur de #mem dans #chiffre1.
+			?
+			Si #chiffre2 est égal à "mem" alors 
+				Copier la valeur de #mem dans #chiffre2.
+			?
+			#resultat =  #chiffre1 moins #chiffre2.	
+			Afficher "Votre calcul est égal à #resultat".
+			Attendre 200ms.
+			Afficher "#TexteD".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #mem2.
+			Si #mem2 est égal à "Y" alors
+				#mem = #resultat.
+				Afficher "Vous avez sauvegardé votre réponse".
+			?
+		
+			Attendre 200ms.
+			Afficher "\n\nVoulez vous rejouer ? (Y/N): ".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #reponseF.
+			Si #reponseF est égal à "Y" alors	
+				Copier le résultat de (#Conti) dans #Conti.
+			sinon
+				Copier le résultat de (#Conti + 1) dans #Conti.
+			?
+		?
+	
+		//Multiplication
+		Si #Reponse est égale à "Multiplication" alors
+			Afficher "#TexteB".	
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre1.
+			Afficher "#TexteC".	
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre2.
+			Si #chiffre1 est égal à "mem" alors
+				Copier la valeur de #mem dans #chiffre1.
+			?
+			Si #chiffre2 est égal à "mem" alors 
+				Copier la valeur de #mem dans #chiffre2.
+			?
+			#resultat =  #chiffre1 * #chiffre2.	
+			Afficher "Votre calcul est égal à #resultat".
+			Attendre 200ms.
+			Afficher "#TexteD".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #mem2.
+			Si #mem2 est égal à "Y" alors
+				#mem = #resultat.
+				Afficher "Vous avez sauvegardé votre réponse".
+			?
+		
+			Attendre 200ms.
+			Afficher "\n\nVoulez vous rejouer ? (Y/N): ".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #reponseF.
+			Si #reponseF est égal à "Y" alors	
+				Copier le résultat de (#Conti) dans #Conti.
+			sinon
+				Copier le résultat de (#Conti + 1) dans #Conti.
+			?
+		?
+
+		//Division
+		Si #Reponse est égale à "Division" alors
+			Afficher "#TexteB".	
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre1.
+			Afficher "#TexteC".	
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre2.
+			Si #chiffre1 est égal à "mem" alors
+				Copier la valeur de #mem dans #chiffre1.
+			?
+			Si #chiffre2 est égal à "mem" alors 
+				Copier la valeur de #mem dans #chiffre2.
+			?
+			#resultat =  #chiffre1 / #chiffre2.	
+			Afficher "Votre calcul est égal à #resultat".
+			Attendre 200ms.
+			Afficher "#TexteD".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #mem2.
+			Si #mem2 est égal à "Y" alors
+				#mem = #resultat.
+				Afficher "Vous avez sauvegardé votre réponse".
+			?
+		
+			Attendre 200ms.
+			Afficher "\n\nVoulez vous rejouer ? (Y/N): ".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #reponseF.
+			Si #reponseF est égal à "Y" alors	
+				Copier le résultat de (#Conti) dans #Conti.
+			sinon
+				Copier le résultat de (#Conti + 1) dans #Conti.
+			?
+		?
+
+		//Inversion
+		Si #Reponse est égale à "Inversion" alors
+			Afficher "#TexteB".	
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre1.
+			Si #chiffre1 est égal à "mem" alors
+				Copier la valeur de #mem dans #chiffre1.
+			?
+			#resultat =  1/ #chiffre1.	
+			Afficher "Votre calcul est égal à #resultat".
+			Attendre 200ms.
+			Afficher "#TexteD".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #mem2.
+			Si #mem2 est égal à "Y" alors
+				#mem = #resultat.
+				Afficher "Vous avez sauvegardé votre réponse".
+			?
+		
+			Attendre 200ms.
+			Afficher "\n\nVoulez vous rejouer ? (Y/N): ".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #reponseF.
+			Si #reponseF est égal à "Y" alors	
+				Copier le résultat de (#Conti) dans #Conti.
+			sinon
+				Copier le résultat de (#Conti + 1) dans #Conti.
+			?
+		?
+
+		//Racine
+		Si #Reponse est égale à "Racine" alors
+			Afficher "#TexteB".	
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre1.
+			Si #chiffre1 est égal à "mem" alors
+				Copier la valeur de #mem dans #chiffre1.
+			?
+			#resultat =  racine carrée de #chiffre1.	
+			Afficher "Votre calcul est égal à #resultat".
+			Attendre 200ms.
+			Afficher "#TexteD".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #mem2.
+			Si #mem2 est égal à "Y" alors
+				#mem = #resultat.
+				Afficher "Vous avez sauvegardé votre réponse".
+			?
+		
+			Attendre 200ms.
+			Afficher "\n\nVoulez vous rejouer ? (Y/N): ".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #reponseF.
+			Si #reponseF est égal à "Y" alors	
+				Copier le résultat de (#Conti) dans #Conti.
+			sinon
+				Copier le résultat de (#Conti + 1) dans #Conti.
+			?
+		?
+	
+		//Puissance
+		Si #Reponse est égale à "Puissance" alors
+			Afficher "#TexteB".	
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre1.
+			Afficher "#TexteC".	
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre2.
+			Si #chiffre1 est égal à "mem" alors
+				Copier la valeur de #mem dans #chiffre1.
+			?
+			Si #chiffre2 est égal à "mem" alors 
+				Copier la valeur de #mem dans #chiffre2.
+			?
+			#resultat =  #chiffre1 ^ #chiffre2.	
+			Afficher "Votre calcul est égal à #resultat".
+			Attendre 200ms.
+			Afficher "#TexteD".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #mem2.
+			Si #mem2 est égal à "Y" alors
+				#mem = #resultat.
+				Afficher "Vous avez sauvegardé votre réponse".
+			?
+		
+			Attendre 200ms.
+			Afficher "\n\nVoulez vous rejouer ? (Y/N): ".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #reponseF.
+			Si #reponseF est égal à "Y" alors	
+				Copier le résultat de (#Conti) dans #Conti.
+			sinon
+				Copier le résultat de (#Conti + 1) dans #Conti.
+			?
+		?
+
+		//Pourcentage
+		Si #Reponse est égale à "Pourcentage" alors
+			Afficher "#TexteB".	
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre1.
+			Si #chiffre1 est égal à "mem" alors
+				Copier la valeur de #mem dans #chiffre1.
+			?
+			#resultat =  #chiffre1 / 100.
+			Afficher "Votre calcul est égal à #resultat".
+			Attendre 200ms.
+			Afficher "#TexteD".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #mem2.
+			Si #mem2 est égal à "Y" alors
+				#mem = #resultat.
+				Afficher "Vous avez sauvegardé votre réponse".
+			?
+		
+			Attendre 200ms.
+			Afficher "\n\nVoulez vous rejouer ? (Y/N): ".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #reponseF.
+			Si #reponseF est égal à "Y" alors	
+				Copier le résultat de (#Conti) dans #Conti.
+			sinon
+				Copier le résultat de (#Conti + 1) dans #Conti.
+			?
+		?
+	>>	
+
+
+
+Fin de la transmission.
