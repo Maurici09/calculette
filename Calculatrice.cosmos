@@ -1,0 +1,214 @@
+Auteur: pt40ven
+Date: 28.10.2024
+Entreprise: DGEP
+Description: Calculatrice
+
+Voici les ordres du programme Calculatrice  :
+	Effacer l'écran.
+	Masquer le curseur.
+	Afficher "+----------+\n".
+	Afficher "|Calculette|\n".
+	Afficher "+----------+".
+	
+	Créer une zone mémoire #texteReponse avec le texte "\nVotre reponse (validez avec ENTER): ".
+	Créer une zone mémoire #chiffre1.
+	Créer une zone mémoire #chiffre2.
+	Créer une zone mémoire #Addition avec le texte "+".
+	Créer une zone mémoire #Soustraction avec le texte "-".
+	Créer une zone mémoire #Multiplication avec le texte "*".
+	Créer une zone mémoire #Division avec le texte "/".
+	Créer une zone mémoire #Inversion avec le texte "1/x".
+	Créer une zone mémoire #Racine avec le texte "Racine".
+	Créer une zone mémoire #Puissance avec le texte "Puissance".
+	Créer une zone mémoire #Pourcentage avec le texte "x/100".
+	Créer une zone mémoire #resultat.
+	Créer une zone mémoire #sauvegarde avec le texte "vide".
+	Créer une zone mémoire #continue avec le texte "Y".
+	Créer une zone mémoire #sauvegardeyes.
+	Répéter tant que #continue est égale à "Y"
+	
+	//Addition
+
+	Afficher "\n\nQue voulez vous faire ? Addition (#Addition) Soustraction (-) Multiplication (*) Division (/) Inversion (1/x) Racine Puissance Pourcentage (x/100) \n\n".
+	Récupérer la saisie et la stocker dans la zone mémoire nommée #texteReponse.
+	Si #texteReponse est égale à "#Addition" alors
+	
+		//Chiffre 1
+		Afficher "\n\nIndiquer votre premier chiffre\n\n".
+		Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre1.
+		
+		//Chiffre 2
+		Afficher "\n\nIndiquer votre deuxième chiffre\n\n".
+		Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre2.
+		
+		//Utilisation mémoire ?
+		Si #chiffre1 est égal à "$m$" alors
+			Copier la valeur de #sauvegarde dans #chiffre1.
+		?
+		Si #chiffre2 est égal à "$m$" alors 
+			Copier la valeur de #sauvegarde dans #chiffre2.
+		?	
+		
+		#resultat = #chiffre1 + #chiffre2.
+		Afficher "\n\n#chiffre1 #Addition #chiffre2 = #resultat\n\n".
+		Afficher "Voulez vous sauvegardé le #resultat (Y/N)".
+		Récupérer la saisie et la stocker dans la zone mémoire nommée #sauvegardeyes.
+		Si #sauvegardeyes est égale à "Y" alors
+		   #sauvegarde = #resultat.
+			Afficher "Vous avez sauvegardé votre réponse".
+		?
+			
+		
+	//Soustraction
+	sinon si #texteReponse est égale à "#Soustraction" alors
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #texteReponse.
+			Afficher "\n\nIndiquer votre premier chiffre\n\n".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre1.
+			
+			
+			Afficher "\n\nIndiquer votre deuxième chiffre\n\n".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre2.
+			
+		Si #chiffre1 est égal à "$m$" alors
+			Copier la valeur de #sauvegarde dans #chiffre1.
+		?
+		
+		Si #chiffre2 est égal à "$m$" alors 
+			Copier la valeur de #sauvegarde dans #chiffre2.
+		?	
+		#resultat = #chiffre1 - #chiffre2.
+		Afficher "\n\n#chiffre1 #Soustraction #chiffre2 = #resultat\n\n".
+		Afficher "Voulez vous sauvegardé le #resultat (Y/N)".
+		Récupérer la saisie et la stocker dans la zone mémoire nommée #sauvegardeyes.
+			Si #sauvegardeyes est égale à "Y" alors
+			   #sauvegarde = #resultat.
+				Afficher "Vous avez sauvegardé votre réponse".
+			?
+	//Multiplication
+	sinon si #texteReponse est égale à "#Multiplication" alors
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #texteReponse.
+			Afficher "\n\nIndiquer votre premier chiffre\n\n".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre1.
+			Afficher "\n\nIndiquer votre deuxième chiffre\n\n".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre2.
+			
+		Si #chiffre1 est égal à "$m$" alors
+			Copier la valeur de #sauvegarde dans #chiffre1.
+		?
+		
+		Si #chiffre2 est égal à "$m$" alors 
+			Copier la valeur de #sauvegarde dans #chiffre2.
+		?
+			#resultat = #chiffre1 * #chiffre2.
+			Afficher "\n\n#chiffre1 #Multiplication #chiffre2 = #resultat\n\n".
+			Afficher "Voulez vous sauvegardé le #resultat (Y/N)".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #sauvegardeyes.
+			Si #sauvegardeyes est égale à "Y" alors
+			   #sauvegarde = #resultat.
+				Afficher "Vous avez sauvegardé votre réponse".
+			?
+	//Division
+	sinon si #texteReponse est égale à "#Division" alors
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #texteReponse.
+			Afficher "\n\nIndiquer votre premier chiffre\n\n".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre1.
+			Afficher "\n\nIndiquer votre deuxième chiffre\n\n".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre2.
+			
+		Si #chiffre1 est égal à "$m$" alors
+			Copier la valeur de #sauvegarde dans #chiffre1.
+		?
+		
+		Si #chiffre2 est égal à "$m$" alors 
+			Copier la valeur de #sauvegarde dans #chiffre2.
+		?
+			#resultat = #chiffre1 / #chiffre2.
+			Afficher "\n\n#chiffre1 #Division #chiffre2 = #resultat\n\n".
+			Afficher "Voulez vous sauvegardé le #resultat (Y/N)".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #sauvegardeyes.
+			Si #sauvegardeyes est égale à "Y" alors
+			   #sauvegarde = #resultat.
+				Afficher "Vous avez sauvegardé votre réponse".
+			?
+	//Inversion
+	sinon si #texteReponse est égale à "#Inversion" alors
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #texteReponse.
+			Afficher "\n\nIndiquer votre chiffre\n\n".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre1.
+			
+		Si #chiffre1 est égal à "$m$" alors
+			Copier la valeur de #sauvegarde dans #chiffre1.
+		?	
+		
+			#resultat = 1 / #chiffre1.
+			Afficher "\n\n#Inversion = #resultat\n\n".
+			Afficher "Voulez vous sauvegardé le #resultat (Y/N)".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #sauvegardeyes.
+			Si #sauvegardeyes est égale à "Y" alors
+			   #sauvegarde = #resultat.
+				Afficher "Vous avez sauvegardé votre réponse".
+			?
+	//Racine carrée
+	sinon si #texteReponse est égale à "#Racine" alors
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #texteReponse.
+			Afficher "\n\nIndiquer le chiffre que vous voulez mettre à la racine carrée\n\n".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre1.
+		
+		Si #chiffre1 est égal à "$m$" alors
+			Copier la valeur de #sauvegarde dans #chiffre1.
+		?
+			
+			#resultat = racine carrée de #chiffre1.
+			Afficher "\n\n#chiffre1 #Racine = #resultat\n\n".
+			Afficher "Voulez vous sauvegardé le #resultat (Y/N)".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #sauvegardeyes.
+			Si #sauvegardeyes est égale à "Y" alors
+			   #sauvegarde = #resultat.
+				Afficher "Vous avez sauvegardé votre réponse".
+			?
+	//Puissance
+	sinon si #texteReponse est égale à "#Puissance" alors
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #texteReponse.
+			Afficher "\n\nIndiquer votre premier chiffre\n\n".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre1.
+			Afficher "\n\nIndiquer votre deuxième chiffre\n\n".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre2.
+			
+		Si #chiffre1 est égal à "$m$" alors
+			Copier la valeur de #sauvegarde dans #chiffre1.
+		?
+		
+		Si #chiffre2 est égal à "$m$" alors
+			Copier la valeur de #sauvegarde dans #chiffre1.
+		?
+			#resultat = #chiffre1 élevé à la puissance #chiffre2.
+			Afficher "\n\n#chiffre1 #Puissance #chiffre2 = #resultat\n\n".
+			Afficher "Voulez vous sauvegardé le #resultat (Y/N)".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #sauvegardeyes.
+			Si #sauvegardeyes est égale à "Y" alors
+			#sauvegarde = #resultat.
+				Afficher "Vous avez sauvegardé votre réponse".
+			?
+	//Pourcentage
+	sinon si #texteReponse est égale à "#Pourcentage" alors
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #texteReponse.
+			Afficher "\n\nIndiquer le chiffre que vous voulez mettre en pourcent\n\n".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #chiffre1.
+			
+		Si #chiffre1 est égal à "$m$" alors
+			Copier la valeur de #sauvegarde dans #chiffre1.
+		?
+			#resultat = #chiffre1 / 100.
+			Afficher "\n\n#Pourcentage #chiffre1 = #resultat\n\n".
+			Afficher "\n\nVoulez vous sauvegardé le #resultat (Y/N)\n\n".
+			Récupérer la saisie et la stocker dans la zone mémoire nommée #sauvegardeyes.
+		Si #sauvegardeyes est égale à "Y" alors
+		   #sauvegarde = #resultat.
+				Afficher "\n\nVous avez sauvegardé votre réponse\n\n".
+			?
+	?
+	
+	Afficher "\n\nVoulez vous continuer a utiliser la calculette (Y/N)\n\n".
+	Récupérer la saisie et la stocker dans la zone mémoire nommée #continue.
+	>>	
+Fin de la transmission.
